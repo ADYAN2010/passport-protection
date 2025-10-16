@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luggage Tag — Scan Me</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #eef2ff, #e0f7fa);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+  }
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+  }
+
+  .card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1.5px solid #d4af37;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 22px;
+    width: 360px;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .photo-display {
+    width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+  }
+
+  /* Flags on corners */
+  .flag {
+    width: 22px;
+    height: 14px;
+    position: absolute;
+    top: 12px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .left-flag {
+    left: 12px;
+  }
+
+  .right-flag {
+    right: 12px;
+  }
+
+  .passport-header {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .passport-header h1 {
+    font-size: 0.95rem;
+    color: #2f2f2f;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .ticket {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .ticket .avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+  }
+
+  h2 {
+    color: #c0942b;
+    margin-bottom: 5px;
+  }
+
+  .muted {
+    color: #666;
+    font-size: 0.85rem;
+  }
+
+  .details {
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .details .muted {
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  .contact-links {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .contact-links a {
+    color: #444;
+    font-size: 1.3rem;
+    transition: 0.3s ease;
+  }
+
+  .contact-links a:hover {
+    color: #d4af37;
+    transform: scale(1.2);
+  }
+
+  footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+  }
+
+  footer strong {
+    color: #c0942b;
+  }
+</style>
+
+</head>
+<body>
+  <div class="wrap">
+    <!-- LEFT CARD -->
+    <div class="card">
+      <img src="bangladesh.png" alt="Bangladesh Flag" class="flag left-flag" />
+      <img src="saudi.png" alt="Saudi Flag" class="flag right-flag" />
+      
+      <div class="passport-header">
+        <h1>International Luggage Tag</h1>
+      </div>
+
+      <div class="photo">
+        <img src="father.jpg" alt="Owner Photo" class="photo-display" />
+      </div>
+
+      <div class="info-display" style="margin-top: 15px;">
+        <p><strong>Name:</strong> Atiqur Rahman</p>
+        <p><strong>Passport No.:</strong> A14424562</p>
+        <p><strong>Nationality:</strong> Bangladeshi</p>
+        <p><strong>Phone:</strong> +8801610984385</p>
+        <p><strong>Email:</strong> atiq.agrani@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="card">
+      <img src="bangladesh.png" alt="Bangladesh Flag" class="flag left-flag" />
+      <img src="saudi.png" alt="Saudi Flag" class="flag right-flag" />
+
+      <div class="passport-header">
+        <h1>Owner Information</h1>
+      </div>
+
+      <div class="ticket">
+        <div class="avatar">
+          <img src="father.jpg" alt="Owner Photo" />
+        </div>
+        <div class="ticket-info">
+          <h2>Atiqur Rahman</h2>
+          <div class="muted">Passport: A14424562</div>
+          <div class="muted">Phone: +8801610984385</div>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="muted">Bangladesh Address</div>
+        <div>Road #3, Mohammedia Housing Limited, Mohammedpur, Dhaka</div>
+
+        <div class="muted">Saudi Arabia Address</div>
+        <div>Al Mokhtara Diamond Hotel, Madina, Saudi Arabia</div>
+
+        <div class="muted">Notes</div>
+        <div>If found, please contact Mr. Atiqur Rahman immediately.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Links -->
+  <div class="contact-links">
+    <a href="tel:+8801610984385" title="Call"><i class="fa-solid fa-phone"></i></a>
+    <a href="mailto:atiq.agrani@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://maps.app.goo.gl/yARhB8kMw1Nqq2uy6" target="_blank" title="View Location"><i class="fa-solid fa-map-marker-alt"></i></a>
+    <a href="https://www.facebook.com/atiqur.rahman.174139" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://wa.me/8801730984385" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+
+  <footer>
+    Property of <strong>Atiqur Rahman</strong> — Please contact if found.
+  </footer>
+</body>
+</html>

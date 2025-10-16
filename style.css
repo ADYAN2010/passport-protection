@@ -1,0 +1,213 @@
+:root {
+  --bg-dark: #0d1b2a;
+  --card-blue: #1b263b;
+  --accent-gold: #d4af37;
+  --text-light: #f8fafc;
+  --muted: #94a3b8;
+}
+
+/* 🌙 Global Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* 🇧🇩🇸🇦 Flags (Bottom of Page) */
+.page-flags {
+  position: fixed;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  z-index: 100;
+}
+
+.page-flags img {
+  width: 40px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid var(--accent-gold);
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.page-flags img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.7);
+}
+
+/* 💳 Card Layout */
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 60px;
+  margin-bottom: 90px;
+}
+
+.card {
+  background: var(--card-blue);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  padding: 30px 25px;
+  flex: 1 1 360px;
+  border: 2px solid var(--accent-gold);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(212, 175, 55, 0.25);
+}
+
+/* 👤 Profile Photo */
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+.photo-display {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-gold);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-display:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
+}
+
+/* ℹ️ Info Section */
+.info-display {
+  text-align: center;
+}
+
+.info-display p {
+  font-size: 1rem;
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+/* ✈️ Ticket Section */
+.ticket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.avatar img {
+  width: 85px;
+  height: 85px;
+  border-radius: 10px;
+  border: 2px solid var(--accent-gold);
+  object-fit: cover;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.35);
+}
+
+.ticket-info h2 {
+  margin: 5px 0;
+  font-size: 1.3rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.details {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* 🌍 Contact & Social Links */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.contact-links a {
+  color: var(--accent-gold);
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: var(--text-light);
+  transform: scale(1.15);
+}
+
+/* 🪪 Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 35px;
+  color: var(--muted);
+  border-top: 1px solid var(--accent-gold);
+  padding-top: 10px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-display {
+    width: 130px;
+    height: 130px;
+  }
+
+  .page-flags img {
+    width: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-display {
+    width: 110px;
+    height: 110px;
+  }
+
+  .page-flags img {
+    width: 30px;
+  }
+}
